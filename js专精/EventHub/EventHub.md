@@ -47,5 +47,3 @@ eventHub.on("执行fn", fn);
 eventHub.emit("执行fn",'fn被执行');
 eventHub.off("执行fn", fn);
 ```
-
-![]('./../../../前端剑指offer/images/eventHub/eventHub1.png) 
