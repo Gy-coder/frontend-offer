@@ -1,22 +1,3 @@
-# 手写EventHub
-
-## 手写思路
-
-1. 确定API
-2. 添加测试用例
-3. 测试pass
-4. 重构代码
-
-## 需求分析(确定api)
-
-1. EventHub#on
-2. EventHub#off
-3. EventHub#emit
-
-
-## EventHub代码
-
-```js
 class EventHub {
   private cache: { [K: string]: Array<Function> } = {}; // {name:[fn1,fn2,fn3]}
   on(name: string, fn: Function) {
@@ -36,16 +17,24 @@ class EventHub {
     this.cache[name].splice(index, 1);
   }
 }
-```
 
-## 使用方法
+export default EventHub;
 
-```js
-const eventHub = new EventHub();
-let fn = (data) => {console.log(data)};
-eventHub.on("执行fn", fn);
-eventHub.emit("执行fn",'fn被执行');
-eventHub.off("执行fn", fn);
-```
+/**
+ * 辅助函数indexOf
+ * @param arr : Array<any>
+ * @param item : any
+ * @return number
+ */
 
-![]('./../../../前端剑指offer/images/eventHub/eventHub1.png) 
+function indexOf(arr: Array<any>, item: any) {
+  if (arr === undefined) return -1;
+  let index = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      index = i;
+      break;
+    }
+  }
+  return index;
+}
