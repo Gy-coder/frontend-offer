@@ -49,17 +49,58 @@ describe("测试深拷贝", () => {
       assert(a[0] !== a2[0]);
       assert(a[0][0] === a2[0][0]);
     });
-  });
-  it("能够复制函数", () => {
-    const a = function (x, y) {
-      return x + y;
-    };
-    a.xxx = { yyy: { zzz: 1 } };
-    const a2 = deepClone(a);
-    assert(a !== a2);
-    assert(a.xxx.yyy.zzz === a2.xxx.yyy.zzz);
-    assert(a.xxx.yyy !== a2.xxx.yyy);
-    assert(a.xxx !== a2.xxx);
-    assert(a(1, 2) === a2(1, 2));
+    it("能够复制函数", () => {
+      const a = function (x, y) {
+        return x + y;
+      };
+      a.xxx = { yyy: { zzz: 1 } };
+      const a2 = deepClone(a);
+      assert(a !== a2);
+      assert(a.xxx.yyy.zzz === a2.xxx.yyy.zzz);
+      assert(a.xxx.yyy !== a2.xxx.yyy);
+      assert(a.xxx !== a2.xxx);
+      assert(a(1, 2) === a2(1, 2));
+    });
+    it("环也可以复制", () => {
+      const a = { name: "jack" };
+      a.self = a;
+      const a2 = deepClone(a);
+      assert(a !== a2);
+      assert(a.name === a2.name);
+      assert(a.self !== a2.self);
+    });
+    xit("不会爆栈", () => {
+      let a = { child: null };
+      let b = a;
+      for (let i = 0; i < 20000; i++) {
+        b.child = {
+          child: null,
+        };
+        b = b.child;
+      }
+      let a2 = deepClone(a);
+      assert(a !== a2);
+    });
+    it("可以复制正则表达式", () => {
+      const a = new RegExp("hi\\d+", "gi");
+      a.xxx = { yyy: { zzz: 1 } };
+      const a2 = deepClone(a);
+      assert(a.source === a2.source);
+      assert(a.flags === a2.flags);
+      assert(a !== a2);
+      assert(a.xxx.yyy.zzz === a2.xxx.yyy.zzz);
+      assert(a.xxx.yyy !== a2.xxx.yyy);
+      assert(a.xxx !== a2.xxx);
+    });
+    it("可以复制Date", () => {
+      const a = new Date();
+      a.xxx = { yyy: { zzz: 1 } };
+      const a2 = deepClone(a);
+      assert(a !== a2);
+      assert(a.getTime() === a2.getTime());
+      assert(a.xxx.yyy.zzz === a2.xxx.yyy.zzz);
+      assert(a.xxx.yyy !== a2.xxx.yyy);
+      assert(a.xxx !== a2.xxx);
+    });
   });
 });

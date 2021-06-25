@@ -1,21 +1,26 @@
+let cache = [];
+
 module.exports = function deepClone(source) {
   if (source instanceof Object) {
-    if (source instanceof Array) {
-      const dist = new Array();
-      for (let key in source) {
-        dist[key] = deepClone(source[key]);
-      }
-      return dist;
-    } else if (source instanceof Function) {
-      const dist = function () {
-        return source.call(this, ...arguments);
-      };
-      for (let key in source) {
-        dist[key] = deepClone(source[key]);
-      }
-      return dist;
+    let cacheDist = findCache(source);
+    if (cacheDist) {
+      return cacheDist;
     } else {
-      const dist = new Object();
+      let dist;
+      if (source instanceof Array) {
+        dist = new Array();
+      } else if (source instanceof Function) {
+        dist = function () {
+          return source.call(this, ...arguments);
+        };
+      } else if (source instanceof RegExp) {
+        dist = new RegExp(source.source, source.flags);
+      } else if (source instanceof Date) {
+        dist = new Date(source);
+      } else {
+        dist = new Object();
+      }
+      cache.push({ source, dist });
       for (let key in source) {
         dist[key] = deepClone(source[key]);
       }
@@ -24,3 +29,12 @@ module.exports = function deepClone(source) {
   }
   return source;
 };
+
+function findCache(source) {
+  for (let i = 0; i < cache.length; i++) {
+    if (cache[i].source === source) {
+      return cache[i].dist;
+    }
+  }
+  return undefined;
+}

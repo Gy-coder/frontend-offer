@@ -6,7 +6,7 @@
   "author": "Gy <406631892@qq.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha -w ./src/**/test/*.js"
+    "test": "mocha ./src/**/test/*.js"
   },
   "devDependencies": {
     "@types/chai": "^4.2.0",
