@@ -15,3 +15,7 @@
 
 1. [手写 EventHub](https://github.com/Gy-coder/frontend-offer/blob/master/src/js%E4%B8%93%E7%B2%BE/EventHub/EventHub.md)
 2. [手写深拷贝](https://github.com/Gy-coder/frontend-offer/blob/master/src/js%E4%B8%93%E7%B2%BE/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.md)
+
+## 算法题思路部分
+
+1. [快速选择](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9.md)
