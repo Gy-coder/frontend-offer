@@ -9,6 +9,7 @@
 ## css 部分
 
 1. [css 选择器权重计算](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E5%89%8D%E7%AB%AF%E5%89%91%E6%8C%87offer/css/css%E9%80%89%E6%8B%A9%E5%99%A8%E6%9D%83%E9%87%8D.md)
+2. [0.5px 边框](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E5%89%8D%E7%AB%AF%E5%89%91%E6%8C%87offer/css/0.5px%E8%BE%B9%E6%A1%86.md)
 
 ## 手写 js 部分
 
