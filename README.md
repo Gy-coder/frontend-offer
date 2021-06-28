@@ -8,15 +8,16 @@
 
 ## css 部分
 
-1. [css 选择器权重计算](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E5%89%8D%E7%AB%AF%E5%89%91%E6%8C%87offer/css/css%E9%80%89%E6%8B%A9%E5%99%A8%E6%9D%83%E9%87%8D.md)
-2. [0.5px 边框](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E5%89%8D%E7%AB%AF%E5%89%91%E6%8C%87offer/css/0.5px%E8%BE%B9%E6%A1%86.md)
+1. [css 选择器权重计算](../前端剑指offer/src/前端剑指offer/css/css选择器权重.md)
+2. [0.5px 边框](../前端剑指offer/src/前端剑指offer/css/0.5px边框.md)
 
 ## 手写 js 部分
 
-1. [手写 EventHub](https://github.com/Gy-coder/frontend-offer/blob/master/src/js%E4%B8%93%E7%B2%BE/EventHub/EventHub.md)
-2. [手写深拷贝](https://github.com/Gy-coder/frontend-offer/blob/master/src/js%E4%B8%93%E7%B2%BE/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D/%E6%89%8B%E5%86%99%E6%B7%B1%E6%8B%B7%E8%B4%9D.md)
+1. [手写 EventHub](../前端剑指offer/src/js专精/EventHub/EventHub.md)
+2. [手写深拷贝](../前端剑指offer/src/js专精/手写深拷贝/手写深拷贝.md)
 3. [数组拍平](./src/js专精/数组拍平/数组拍平.md)
+4. [数组去重](./src//js专精/数组去重/数组去重.md)
 
 ## 算法题思路部分
 
-1. [快速选择](https://github.com/Gy-coder/frontend-offer/blob/master/src/%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9/%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9.md)
+1. [快速选择](../前端剑指offer/src/算法思路/快速选择/快速选择.md)
