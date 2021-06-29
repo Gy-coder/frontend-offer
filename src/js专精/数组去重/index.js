@@ -7,6 +7,8 @@
  * }
  */
 
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
+
 /**
  * 方法2 使用Map去重
  * @param {*} arr 
@@ -24,10 +26,27 @@
     } 
  */
 
+/**
+ * 
+ * @param {*} arr 
+ * @returns 
+ * function deduplication(arr) {
+      return arr.reduce((prev, cur) => {
+        return prev.includes(cur) ? prev : [...prev, cur];
+      }, []);
+    }
+ */
+
 function deduplication(arr) {
-  return arr.reduce((prev, cur) => {
-    return prev.includes(cur) ? prev : [...prev, cur];
-  }, []);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr.splice(j, 1);
+        j--;
+      }
+    }
+  }
+  return arr;
 }
 
 module.exports = deduplication;
