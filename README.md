@@ -16,7 +16,8 @@
 1. [手写 EventHub](./src/js专精/EventHub/EventHub.md)
 2. [手写深拷贝](./src/js专精/手写深拷贝/手写深拷贝.md)
 3. [数组拍平](./src/js专精/数组拍平/数组拍平.md)
-4. [数组去重](./src//js专精/数组去重/数组去重.md)
+4. [数组去重](./src/js专精/数组去重/数组去重.md)
+5. [async & await](./src/js专精/async%20await/async%20await.md)
 
 ## 算法题思路部分
 
