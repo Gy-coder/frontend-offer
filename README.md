@@ -19,6 +19,7 @@
 3. [数组拍平](./src/js专精/数组拍平/数组拍平.md)
 4. [数组去重](./src/js专精/数组去重/数组去重.md)
 5. [async & await](./src/js专精/async%20await/async%20await.md)
+6. [手写 Promise](./src/js/../js专精/手写Promise/手写Promise.md)
 
 ## 算法题思路部分
 
