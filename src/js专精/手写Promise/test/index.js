@@ -164,4 +164,126 @@ describe("测试Promise", () => {
       done();
     }, 0);
   });
+  it("2.2.7 then必须返回一个promise", () => {
+    const promise = new Promise1((resolve) => {
+      resolve();
+    });
+    const promise2 = promise.then(
+      () => {},
+      () => {}
+    );
+    assert(promise2 instanceof Promise1);
+  });
+  it(`2.2.7.1 如果onFulfilled或onRejected返回一个值x
+  , 运行 Promise Resolution Procedure [[Resolve]](promise2, x)`, (done) => {
+    const promise = new Promise1((resolve) => {
+      resolve();
+    });
+    const promise2 = promise
+      .then(
+        () => "成功",
+        () => {}
+      )
+      .then((result) => {
+        assert.equal(result, "成功");
+        done();
+      });
+    assert(promise2 instanceof Promise1);
+  });
+  it(`2.2.7.1 x是一个Promise`, (done) => {
+    const promise = new Promise1((resolve) => {
+      resolve();
+    });
+    const fn = sinon.fake();
+    const promise2 = promise.then(() => {
+      return new Promise1((resolve) => {
+        resolve();
+      });
+    });
+    promise2.then(fn);
+    setTimeout(() => {
+      assert(fn.called);
+      done();
+    }, 0);
+  });
+  it(`2.2.7.1.2 x是一个Promise 且失败了`, (done) => {
+    const promise = new Promise1((resolve, reject) => {
+      resolve();
+    });
+    const fn = sinon.fake();
+    const promise2 = promise.then(() => {
+      return new Promise1((resolve, reject) => {
+        reject();
+      });
+    });
+    promise2.then(null, fn);
+    setTimeout(() => {
+      assert(fn.called);
+      done();
+    }, 0);
+  });
+  it(`2.2.7.1 第二个函数x是一个Promise`, (done) => {
+    const promise = new Promise1((resolve, reject) => {
+      reject();
+    });
+    const fn = sinon.fake();
+    const promise2 = promise.then(null, () => {
+      return new Promise1((resolve) => {
+        resolve();
+      });
+    });
+    promise2.then(fn);
+    setTimeout(() => {
+      assert(fn.called);
+      done();
+    }, 0);
+  });
+  it(`2.2.7.1.2 第二个函数x是一个Promise 且失败了`, (done) => {
+    const promise = new Promise1((resolve, reject) => {
+      reject();
+    });
+    const fn = sinon.fake();
+    const promise2 = promise.then(null, () => {
+      return new Promise1((resolve, reject) => {
+        reject();
+      });
+    });
+    promise2.then(null, fn);
+    setTimeout(() => {
+      assert(fn.called);
+      done();
+    }, 0);
+  });
+  it(`2.2.7.2 如果success/fail抛出一个异常e，则promise2必须被拒绝`, (done) => {
+    const promise = new Promise1((resolve, reject) => {
+      resolve();
+    });
+    const fn = sinon.fake();
+    const error = new Error();
+    const promise2 = promise.then(() => {
+      throw error;
+    });
+    promise2.then(null, fn);
+    setTimeout(() => {
+      assert(fn.called);
+      assert(fn.calledWith(error));
+      done();
+    }, 0);
+  });
+  it(`2.2.7.2 如果success/fail抛出一个异常e，则promise2必须被拒绝`, (done) => {
+    const promise = new Promise1((resolve, reject) => {
+      reject();
+    });
+    const fn = sinon.fake();
+    const error = new Error();
+    const promise2 = promise.then(null, () => {
+      throw error;
+    });
+    promise2.then(null, fn);
+    setTimeout(() => {
+      assert(fn.called);
+      assert(fn.calledWith(error));
+      done();
+    }, 0);
+  });
 });
