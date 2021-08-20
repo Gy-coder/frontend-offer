@@ -16,6 +16,7 @@
 2. [0.5px 边框](./src/前端剑指offer/css/0.5px边框.md)
 3. [px、em、rem、vw、百分比的区别](./src/前端剑指offer/css/px.md)
 4. [居中的几种方法](./src/前端剑指offer/css/居中.md)
+5. [BFC](./src/前端剑指offer/css/BFC.md)
 
 ## 手写 js 部分
 
@@ -25,6 +26,10 @@
 4. [数组去重](./src/js专精/数组去重/数组去重.md)
 5. [async & await](./src/js专精/async%20await/async%20await.md)
 6. [手写 Promise](./src/js/../js专精/手写Promise/手写Promise.md)
+7. [函数防抖和函数节流](./src/js专精/函数防抖和函数节流/函数防抖和函数节流.md)
+8. [手写 instanceof](./src/js专精/手写instanceof/手写instanceof.md)
+9. [手写 new](./src/js专精/手写new/手写new.md)
+10. [手写 ajax](./src/js专精/手写Ajax/手写Ajax.md)
 
 ## 算法题思路部分
 
