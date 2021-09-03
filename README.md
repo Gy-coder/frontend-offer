@@ -30,7 +30,23 @@
 8. [手写 instanceof](./src/js专精/手写instanceof/手写instanceof.md)
 9. [手写 new](./src/js专精/手写new/手写new.md)
 10. [手写 ajax](./src/js专精/手写Ajax/手写Ajax.md)
+11. [手写柯里化](./src/js专精/函数柯里化/函数柯里化.md)
+12. [手写bind](./src/js专精/手写bind/手写bind.md)
+13. [跨域](./src/js专精/跨域/跨域.md)
+14. [js垃圾回收](./src/js专精/js垃圾回收/js垃圾回收.md)
+15. [事件冒泡](./src/js专精/事件冒泡/事件冒泡.md)
+17. [Eventloop](./src/js专精/EventLoop/eventloop.md)
+
+## Http部分
+
+1. [Http状态码](./src/前端剑指offer/HTTP/HTTP状态码.md)
+2. [Http缓存](./src/前端剑指offer/HTTP/HTTP缓存相关的问题.md)
+3. [Http报文格式](./src/前端剑指offer/HTTP/HTTP报文格式.md)
+4. [keep-alive多路复用](./src/前端剑指offer/HTTP/Keep-alive.md)
+5. [Tcp三次握手](./src/前端剑指offer/HTTP/Tcp.md)
+6. [Web安全](./src/前端剑指offer/HTTP/Web安全.md)
 
 ## 算法题思路部分
 
 1. [快速选择](./src/算法思路/快速选择/快速选择.md)
+2. [字符串查找](./src/算法思路/字符串查找.md)
