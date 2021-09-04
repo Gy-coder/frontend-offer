@@ -45,6 +45,61 @@ Promise 是个类
 4. 对象属性: then/catch/finally
 5. 对象内部属性 state = pending/fulfilled/rejected
 
+## 简易版代码
+
+```ts
+class Promise2 {
+  state = "pending";
+  callbacks = { succeed: [], fail: [] };
+  resolve(result) {
+    if (this.state !== "pending") return;
+    this.state = "fulfilled";
+    nextTick(() => {
+      this.callbacks.succeed.forEach((fn) => {
+        fn.call(undefined, result);
+      });
+    });
+  }
+  reject(reason) {
+    if (this.state !== "pending") return;
+    this.state = "rejected";
+    nextTick(() => {
+      this.callbacks.fail.forEach((fn) => {
+        fn.call(undefined, reason);
+      });
+    });
+  }
+  constructor(fn) {
+    if (typeof fn !== "function") {
+      throw new Error();
+    }
+    fn(this.resolve.bind(this), this.reject.bind(this));
+  }
+  then(succeed?, fail?) {
+    if (typeof succeed === "function") this.callbacks.succeed.push(succeed);
+    if (typeof fail === "function") this.callbacks.fail.push(fail);
+  }
+}
+
+function nextTick(fn) {
+   if (process !== undefined && typeof process.nextTick === "function") {
+      return process.nextTick(fn);
+   } else {
+      var counter = 1;
+      var observer = new MutationObserver(fn);
+      var textNode = document.createTextNode(String(counter));
+
+      observer.observe(textNode, {
+         characterData: true,
+      });
+
+      counter = counter + 1;
+      textNode.data = String(counter);
+   }
+}
+
+```
+
 
 ## 代码
 
