@@ -46,6 +46,11 @@
 5. [Tcp三次握手](./src/前端剑指offer/HTTP/Tcp.md)
 6. [Web安全](./src/前端剑指offer/HTTP/Web安全.md)
 
+
+## React
+
+1. [redux详解](./src/前端剑指offer/React/redux.md)
+
 ## 算法题思路部分
 
 1. [快速选择](./src/算法思路/快速选择/快速选择.md)

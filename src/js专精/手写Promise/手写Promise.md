@@ -210,5 +210,4 @@ function nextTick(fn) {
     textNode.data = String(counter);
   }
 }
-
 ```
