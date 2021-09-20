@@ -45,6 +45,7 @@
 4. [keep-alive多路复用](./src/前端剑指offer/HTTP/Keep-alive.md)
 5. [Tcp三次握手](./src/前端剑指offer/HTTP/Tcp.md)
 6. [Web安全](./src/前端剑指offer/HTTP/Web安全.md)
+7. [浏览器的渲染原理](./src/前端剑指offer/HTTP/浏览器的渲染原理.md)
 
 
 ## React
