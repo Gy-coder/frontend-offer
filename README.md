@@ -36,6 +36,7 @@
 14. [js垃圾回收](./src/js专精/js垃圾回收/js垃圾回收.md)
 15. [事件冒泡](./src/js专精/事件冒泡/事件冒泡.md)
 17. [Eventloop](./src/js专精/EventLoop/eventloop.md)
+18. [LazyMan](./src/js专精/LazyMan/LazyMan.md)
 
 ## Http部分
 
@@ -51,8 +52,12 @@
 ## React
 
 1. [redux详解](./src/前端剑指offer/React/redux.md)
+2. [虚拟DOM](./src/前端剑指offer/React/虚拟DOM.md)
 
 ## 算法题思路部分
 
-1. [快速选择](./src/算法思路/快速选择/快速选择.md)
-2. [字符串查找](./src/算法思路/字符串查找.md)
+1. [快速排序](./src/算法思路/排序/快速排序.md)
+2. [归并排序](./src/算法思路/排序/归并排序.md)
+3. [字符串查找](./src/算法思路/字符串查找.md)
+4. [前缀和与差分](./src/算法思路/前缀和与差分.md)
+5. [位运算](./src/算法思路/位运算.md)
