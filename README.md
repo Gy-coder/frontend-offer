@@ -47,6 +47,7 @@
 5. [Tcp三次握手](./src/前端剑指offer/HTTP/Tcp.md)
 6. [Web安全](./src/前端剑指offer/HTTP/Web安全.md)
 7. [浏览器的渲染原理](./src/前端剑指offer/HTTP/浏览器的渲染原理.md)
+8. [性能优化](./src/前端剑指offer/HTTP/性能优化思路.md)
 
 
 ## React

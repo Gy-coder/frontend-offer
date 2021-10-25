@@ -226,11 +226,9 @@ DOM diff的大概逻辑
 
 如果用index作为key，在删除第二项的时候，index就会从1 2 3变成1 2，框架依然认为你删除的是第3项，依然会遇到这样的bug
 
+## 虚拟DOM的简单实现
 
-
-
-
-
+[链接](https://stackblitz.com/edit/web-platform-ar3d7k?file=script.js)
 
 
 
